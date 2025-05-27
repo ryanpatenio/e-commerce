@@ -16,9 +16,9 @@
 
 ## Steps by Steps Coding
 - [✅] Set Up File structure & Packages | @vite @inertia @laravel
-- [] Set Up ERD
-- [] Set Up Flow Chart
-- [] Set Up Database Schema
+- [✅] Set Up ERD
+- [✅] Set Up Flow Chart
+- [✅] Set Up Database Schema
 - [] Set Up Admin Layout [2-3] days max [8] hours
 - [] Set Up Customer Layout [2-3] days max [8] hours
 - [] Authentication | admin | Staff
@@ -108,3 +108,6 @@
 -- 2 diff middleware for admin and customer
 - by using diff layouts and css library to avoid conflict i separated it, then i use two HandleInertia request to shared diff data from admin and customer
 - to make the code clean i use two diff routes for admin and customer
+# Day 2
+- Set up ERD, Flowchart, Table Structures and Model
+- by setting up all the Model it must be a Singular and PascalCase then the laravel will make that plural when it comes in migrations
