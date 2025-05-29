@@ -1,25 +1,36 @@
-import React from 'react'
 
-const Dashboard = () => {
+import StatsCards from '../../Components/Admin/Dashboard/StatsCard';
+import TopProducts from '../../Components/Admin/Dashboard/TopProducts';
+import RecentOrders from '../../Components/Admin/Dashboard/RecentOrders';
+import OrderStatus from '../../Components/Admin/Dashboard/OrderStatus';
+import SalesReport from '../../Components/Admin/Dashboard/SalesReport';
+import AdminLayout from '../../Layouts/AdminLayout';
+
+ function Dashboard() {
   return (
-     <>
-        <div className="min-h-screen grid place-items-center ">
-            <div className="w-full max-w-sm rounded overflow-hidden shadow-lg bg-white p-8">            
-                <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">Dashboard</div>
-                <p className="text-gray-700 text-base">
-                    This is a Tailwind CSS card that matches Bootstrap's styling.
-                </p>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                    #tag
-                </span>
-                </div>
-            </div>
-        </div>
-    </>
-  )
+    <div className="container-fluid">
+      <h1 className="h2">E-commerce</h1>
+      
+      <div className="row">
+        <StatsCards />
+      </div>
+
+      <div className="row">
+        <TopProducts />
+        <RecentOrders /> 
+      </div>
+                
+      <div className="row">
+         <OrderStatus />
+      </div>
+      
+      <div className="row">
+        <SalesReport />
+      </div>
+    </div>
+  );
 }
 
-export default Dashboard
+Dashboard.layout = page => <AdminLayout children={page} title="Dashboard" />
+
+export default Dashboard;
